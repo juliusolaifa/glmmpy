@@ -28,5 +28,5 @@ def log_mult_norm_prior(theta_n, Sigma):
     """
 
     mean = np.zeros(len(theta_n)) #mean vector is 0
-    log_likelihood = multivariate_normal(theta_n, mean=mean, cov=Sigma)
+    log_likelihood = multivariate_normal.logpdf(theta_n, mean=mean, cov=Sigma)
     return log_likelihood
